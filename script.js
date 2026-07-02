@@ -5,7 +5,10 @@ document.querySelectorAll('nav a').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
 
-        const target = document.querySelector(this.getAttribute('href'));
+        const href = this.getAttribute('href');
+
+if (href.startsWith("#")) {
+    const target = document.querySelector(href);
 
         if (target) {
             target.scrollIntoView({
@@ -138,7 +141,7 @@ function typeEffect() {
 
     if (!typingElement) return;
 
-    const currentWord = words[wordIndex];
+    const currentWord = words[wordIndex % words.length];
 
     if (!deleting) {
 
