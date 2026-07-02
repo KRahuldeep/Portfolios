@@ -27,9 +27,10 @@ window.addEventListener("scroll", () => {
     let current = "home"; // FIX 1: default active section
 
     sections.forEach(section => {
-        const sectionTop = section.offsetTop - 120;
+         const sectionTop = section.offsetTop - 150;
+        const sectionBottom = sectionTop + section.offsetHeight;
 
-        if (pageYOffset >= sectionTop) {
+        if (pageYOffset >= sectionTop && pageYOffset < sectionBottom) {
             current = section.getAttribute("id");
         }
     });
