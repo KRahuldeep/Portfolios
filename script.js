@@ -7,13 +7,14 @@ document.querySelectorAll('nav a').forEach(anchor => {
 
         const href = this.getAttribute('href');
 
-if (href.startsWith("#")) {
-    const target = document.querySelector(href);
+        if (href.startsWith("#")) {
+            const target = document.querySelector(href);
 
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth'
-            });
+            if (target) {
+                target.scrollIntoView({
+                    behavior: "smooth"
+                });
+            }
         }
     });
 });
@@ -190,4 +191,7 @@ document.addEventListener("keydown", function (e) {
     ) {
         e.preventDefault();
     }
+});
+window.addEventListener("load", () => {
+    revealSections();
 });
