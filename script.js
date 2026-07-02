@@ -30,7 +30,7 @@ window.addEventListener("scroll", () => {
          const sectionTop = section.offsetTop - 150;
         const sectionBottom = sectionTop + section.offsetHeight;
 
-        if (pageYOffset >= sectionTop && pageYOffset < sectionBottom) {
+        if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
             current = section.getAttribute("id");
         }
     });
@@ -55,6 +55,8 @@ function revealSections() {
     const windowHeight = window.innerHeight;
 
     revealElements.forEach(section => {
+
+        if (section.classList.contains("show")) return;
 
         const top = section.getBoundingClientRect().top;
 
