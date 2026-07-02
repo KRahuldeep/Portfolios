@@ -55,6 +55,7 @@ nav{
 .logo{
     font-size:30px;
     font-weight:700;
+    cursor:pointer;
 }
 
 .logo span{
@@ -75,6 +76,8 @@ nav ul li a{
     text-decoration:none;
     font-weight:500;
     transition:.3s;
+    padding:6px 0;
+    display:inline-block;
 }
 
 nav ul li a:hover,
@@ -136,7 +139,16 @@ nav ul li a.active{
     transform:translateY(-4px);
     box-shadow:0 10px 25px rgba(56,189,248,.4);
 }
+.btn2{
+    background:transparent;
+    border:2px solid #38bdf8;
+    margin-left:15px;
+}
 
+.btn2:hover{
+    background:#38bdf8;
+    color:white;
+}
 .hero-image{
     flex:1;
     display:flex;
@@ -144,8 +156,8 @@ nav ul li a.active{
 }
 
 .hero-image img{
-    width:340px;
-    height:340px;
+    width:360px;
+    height:360px;
     object-fit:cover;
     border-radius:50%;
     border:6px solid #38bdf8;
@@ -289,17 +301,20 @@ section h2::after{
     font-size:18px;
     margin-bottom:12px;
 }
-
+#contact i{
+    color:#38bdf8;
+    margin-right:10px;
+    font-size:20px;
+}
 /* Footer */
 
 footer{
-    text-align:center;
-    padding:30px;
     background:#111827;
-    margin-top:50px;
+    padding:30px;
+    text-align:center;
     color:#94a3b8;
+    margin-top:60px;
 }
-
 /* Scroll Animation */
 
 section{
@@ -366,6 +381,10 @@ section.show{
         height:260px;
     }
 
+    .btn{
+        margin:8px;
+    }
+
 }
 
 @media(max-width:600px){
@@ -387,4 +406,7 @@ section.show{
         text-align:center;
     }
 
+}
+html{
+    scroll-padding-top:90px;
 }
