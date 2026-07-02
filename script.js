@@ -5,16 +5,12 @@ document.querySelectorAll('nav a').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
 
-        const href = this.getAttribute('href');
+        const target = document.querySelector(this.getAttribute('href'));
 
-        if (href.startsWith("#")) {
-            const target = document.querySelector(href);
-
-            if (target) {
-                target.scrollIntoView({
-                    behavior: "smooth"
-                });
-            }
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth'
+            });
         }
     });
 });
@@ -58,9 +54,9 @@ function revealSections() {
 
     const windowHeight = window.innerHeight;
 
-    revealElements.forEach(section => {
+     revealElements.forEach(section => {
 
-        if (section.classList.contains("show")) return;
+        if (section.classList.contains("show")) return; // FIX
 
         const top = section.getBoundingClientRect().top;
 
@@ -69,7 +65,6 @@ function revealSections() {
         }
 
     });
-
 }
 
 window.addEventListener("scroll", revealSections);
@@ -142,7 +137,7 @@ function typeEffect() {
 
     if (!typingElement) return;
 
-    const currentWord = words[wordIndex % words.length];
+    const currentWord = words[wordIndex];
 
     if (!deleting) {
 
@@ -172,26 +167,3 @@ function typeEffect() {
 }
 
 typeEffect();
-// ===============================
-// Basic Security Layer (Optional)
-// ===============================
-
-// Disable right-click
-document.addEventListener("contextmenu", function (e) {
-    e.preventDefault();
-});
-
-// Disable common inspect shortcuts
-document.addEventListener("keydown", function (e) {
-    if (
-        e.key === "F12" ||
-        (e.ctrlKey && e.shiftKey && e.key === "I") ||
-        (e.ctrlKey && e.shiftKey && e.key === "J") ||
-        (e.ctrlKey && e.key === "U")
-    ) {
-        e.preventDefault();
-    }
-});
-window.addEventListener("load", () => {
-    revealSections();
-});
