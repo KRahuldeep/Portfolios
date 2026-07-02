@@ -1,14 +1,306 @@
-/* =========================
-   General Improvements
-========================= */
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-html{
+/* Reset */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
     scroll-behavior:smooth;
 }
 
 body{
-    overflow-x:hidden;
+    background:#0f172a;
+    color:#f8fafc;
+    line-height:1.7;
 }
+
+/* Scrollbar */
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#111827;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#38bdf8;
+    border-radius:20px;
+}
+
+/* Header */
+
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    z-index:1000;
+    background:rgba(15,23,42,.95);
+    backdrop-filter:blur(10px);
+    box-shadow:0 2px 12px rgba(0,0,0,.3);
+}
+
+nav{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:700;
+}
+
+.logo span{
+    color:#38bdf8;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:25px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+    transition:.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active{
+    color:#38bdf8;
+}
+
+/* Hero */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    max-width:1200px;
+    margin:auto;
+    padding:120px 20px 60px;
+    gap:50px;
+}
+
+.hero-text{
+    flex:1;
+}
+
+.hero h1{
+    font-size:58px;
+    margin-bottom:15px;
+}
+
+.hero h1 span{
+    color:#38bdf8;
+}
+
+.hero h3{
+    font-size:30px;
+    margin-bottom:20px;
+    color:#94a3b8;
+}
+
+.hero p{
+    font-size:18px;
+    margin-bottom:35px;
+    max-width:600px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 35px;
+    background:#38bdf8;
+    color:white;
+    text-decoration:none;
+    border-radius:50px;
+    transition:.3s;
+    font-weight:600;
+}
+
+.btn:hover{
+    background:#0ea5e9;
+    transform:translateY(-4px);
+    box-shadow:0 10px 25px rgba(56,189,248,.4);
+}
+
+.hero-image{
+    flex:1;
+    display:flex;
+    justify-content:center;
+}
+
+.hero-image img{
+    width:340px;
+    height:340px;
+    object-fit:cover;
+    border-radius:50%;
+    border:6px solid #38bdf8;
+    box-shadow:0 0 40px rgba(56,189,248,.35);
+    transition:.4s;
+}
+
+.hero-image img:hover{
+    transform:scale(1.05);
+}
+
+/* Sections */
+
+section{
+    padding:90px 20px;
+    max-width:1200px;
+    margin:auto;
+}
+
+section h2{
+    text-align:center;
+    font-size:42px;
+    color:#38bdf8;
+    margin-bottom:50px;
+    position:relative;
+}
+
+section h2::after{
+    content:'';
+    width:70px;
+    height:4px;
+    background:#38bdf8;
+    display:block;
+    margin:15px auto;
+    border-radius:20px;
+}
+
+/* About */
+
+#about p{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    font-size:18px;
+}
+
+/* Education */
+
+.card{
+    background:#1e293b;
+    padding:30px;
+    border-radius:15px;
+    margin-bottom:25px;
+    transition:.4s;
+    border-left:5px solid #38bdf8;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 10px 30px rgba(0,0,0,.35);
+}
+
+.card h3{
+    color:#38bdf8;
+    margin-bottom:10px;
+}
+
+/* Skills */
+
+.skills{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.skills div{
+    background:#1e293b;
+    padding:25px 40px;
+    border-radius:15px;
+    font-size:20px;
+    font-weight:600;
+    transition:.3s;
+    border:2px solid transparent;
+}
+
+.skills div:hover{
+    background:#38bdf8;
+    border-color:white;
+    transform:translateY(-10px);
+}
+
+/* Certificates */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.gallery img{
+    width:100%;
+    border-radius:15px;
+    transition:.4s;
+    cursor:pointer;
+    box-shadow:0 8px 20px rgba(0,0,0,.3);
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+    box-shadow:0 15px 35px rgba(56,189,248,.3);
+}
+
+/* Projects */
+
+.project{
+    background:#1e293b;
+    padding:30px;
+    border-radius:15px;
+    margin-bottom:25px;
+    transition:.3s;
+}
+
+.project:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+}
+
+.project h3{
+    color:#38bdf8;
+    margin-bottom:15px;
+}
+
+/* Contact */
+
+#contact{
+    text-align:center;
+}
+
+#contact p{
+    font-size:18px;
+    margin-bottom:12px;
+}
+
+/* Footer */
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:#111827;
+    margin-top:50px;
+    color:#94a3b8;
+}
+
+/* Scroll Animation */
 
 section{
     opacity:0;
@@ -21,113 +313,10 @@ section.show{
     transform:translateY(0);
 }
 
-/* =========================
-   Navigation
-========================= */
-
-nav ul li a{
-    position:relative;
-    padding:5px 0;
-}
-
-nav ul li a::after{
-    content:"";
-    position:absolute;
-    left:0;
-    bottom:-5px;
-    width:0;
-    height:2px;
-    background:#38bdf8;
-    transition:.3s;
-}
-
-nav ul li a:hover::after,
-nav ul li a.active::after{
-    width:100%;
-}
-
-nav ul li a.active{
-    color:#38bdf8;
-}
-
-/* =========================
-   Buttons
-========================= */
-
-.btn{
-    transition:.3s;
-    box-shadow:0 10px 25px rgba(56,189,248,.35);
-}
-
-.btn:hover{
-    transform:translateY(-4px);
-    background:#0ea5e9;
-}
-
-/* =========================
-   Hero Image
-========================= */
-
-.hero-image img{
-    transition:.4s;
-    box-shadow:0 0 40px rgba(56,189,248,.35);
-}
-
-.hero-image img:hover{
-    transform:scale(1.05);
-}
-
-/* =========================
-   Cards
-========================= */
-
-.card,
-.project{
-    transition:.35s;
-    cursor:pointer;
-}
-
-.card:hover,
-.project:hover{
-    transform:translateY(-10px);
-    box-shadow:0 15px 40px rgba(0,0,0,.35);
-}
-
-/* =========================
-   Skills
-========================= */
-
-.skills div{
-    transition:.3s;
-}
-
-.skills div:hover{
-    transform:translateY(-8px);
-    background:#0ea5e9;
-}
-
-/* =========================
-   Certificates
-========================= */
-
-.gallery img{
-    transition:.4s;
-    border:3px solid transparent;
-}
-
-.gallery img:hover{
-    transform:scale(1.06);
-    border-color:#38bdf8;
-    box-shadow:0 10px 25px rgba(56,189,248,.4);
-}
-
-/* =========================
-   Typing Text
-========================= */
+/* Typing */
 
 #typing{
     color:#38bdf8;
-    font-weight:bold;
 }
 
 #typing::after{
@@ -141,114 +330,61 @@ nav ul li a.active{
     }
 }
 
-/* =========================
-   Scroll To Top Button
-========================= */
+/* Responsive */
 
-#topBtn{
-    transition:.3s;
-}
+@media(max-width:900px){
 
-#topBtn:hover{
-    transform:scale(1.1);
-}
+    nav{
+        flex-direction:column;
+    }
 
-/* =========================
-   Footer
-========================= */
+    nav ul{
+        margin-top:20px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
 
-footer{
-    margin-top:60px;
-    color:#cbd5e1;
-}
+    .hero{
+        flex-direction:column-reverse;
+        text-align:center;
+    }
 
-/* =========================
-   Responsive Design
-========================= */
+    .hero-text{
+        width:100%;
+    }
 
-@media(max-width:992px){
+    .hero h1{
+        font-size:42px;
+    }
 
-.hero{
-    flex-direction:column-reverse;
-    text-align:center;
-}
+    .hero h3{
+        font-size:24px;
+    }
 
-.hero-text{
-    width:100%;
-}
-
-.hero-image{
-    margin-bottom:40px;
-}
-
-.hero-image img{
-    width:250px;
-}
-
-nav{
-    flex-direction:column;
-}
-
-nav ul{
-    margin-top:20px;
-    flex-wrap:wrap;
-    justify-content:center;
-}
+    .hero-image img{
+        width:260px;
+        height:260px;
+    }
 
 }
 
-@media(max-width:768px){
+@media(max-width:600px){
 
-.hero h1{
-    font-size:38px;
-}
+    nav ul li{
+        margin:10px;
+    }
 
-section h2{
-    font-size:32px;
-}
+    .hero h1{
+        font-size:34px;
+    }
 
-.gallery{
-    grid-template-columns:1fr;
-}
+    section h2{
+        font-size:34px;
+    }
 
-.skills{
-    gap:15px;
-}
-
-.skills div{
-    width:45%;
-    text-align:center;
-}
-
-}
-
-@media(max-width:500px){
-
-.hero{
-    padding-top:180px;
-}
-
-.hero h1{
-    font-size:30px;
-}
-
-.hero-image img{
-    width:180px;
-}
-
-.skills div{
-    width:100%;
-}
-
-.btn{
-    display:block;
-    margin:auto;
-    width:200px;
-    text-align:center;
-}
-
-nav ul li{
-    margin:10px;
-}
+    .skills div{
+        width:100%;
+        text-align:center;
+    }
 
 }
