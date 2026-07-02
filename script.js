@@ -167,3 +167,19 @@ function typeEffect() {
 }
 
 typeEffect();
+// ===============================
+// Mobile Hamburger Menu
+// ===============================
+const menuToggle = document.getElementById("menu-toggle");
+const navMenu = document.getElementById("nav-menu");
+
+menuToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("show");
+});
+
+// Close menu when a navigation link is clicked
+document.querySelectorAll("#nav-menu a").forEach(link => {
+    link.addEventListener("click", () => {
+        navMenu.classList.remove("show");
+    });
+});
