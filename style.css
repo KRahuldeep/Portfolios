@@ -293,20 +293,43 @@ section h2::after{
 
 /* Contact */
 
+/* Contact */
+
 #contact{
     text-align:center;
 }
 
 #contact p{
     font-size:18px;
-    margin-bottom:12px;
+    margin-bottom:18px;
 }
+
 #contact i{
     color:#38bdf8;
     margin-right:10px;
     font-size:20px;
 }
-/* Footer */
+
+/* Contact Links */
+
+#contact a{
+    color:#f8fafc;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+#contact a:hover{
+    color:#38bdf8;
+    text-decoration:underline;
+}
+
+#contact a:visited{
+    color:#f8fafc;
+}
+
+#contact a:active{
+    color:#0ea5e9;
+}/* Footer */
 
 footer{
     background:#111827;
