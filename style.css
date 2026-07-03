@@ -258,7 +258,14 @@ section h2::after{
     gap:30px;
 }
 
-.gallery img{
+/* Remove link styling */
+.gallery a{
+    display:block;
+    text-decoration:none;
+}
+
+.gallery a img{
+    display:block;
     width:100%;
     border-radius:15px;
     transition:.4s;
@@ -266,11 +273,10 @@ section h2::after{
     box-shadow:0 8px 20px rgba(0,0,0,.3);
 }
 
-.gallery img:hover{
+.gallery a img:hover{
     transform:scale(1.05);
     box-shadow:0 15px 35px rgba(56,189,248,.3);
 }
-
 /* Projects */
 
 .project{
